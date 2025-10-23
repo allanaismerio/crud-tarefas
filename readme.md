@@ -1,47 +1,95 @@
-# CRUD de Tarefas (PHP + MySQL)
+CRUD de Tarefas
 
-Este é um **sistema web simples de gerenciamento de tarefas** (CRUD) feito com PHP e MySQL.  
-Permite **adicionar, editar, excluir e visualizar tarefas** em um layout moderno e minimalista.
+Este projeto é uma aplicação simples de gerenciamento de tarefas, desenvolvida em PHP com MySQL.
+O objetivo é permitir o cadastro, edição, exclusão e listagem de tarefas de forma prática e intuitiva.
 
----
+Funcionalidades
 
-## Tecnologias utilizadas
+Adicionar novas tarefas
 
-- **PHP** – Lógica do backend  
-- **MySQL / MariaDB** – Banco de dados  
-- **HTML / CSS** – Estrutura e estilo da página  
-- **XAMPP** – Servidor local para PHP e MySQL  
+Editar tarefas existentes
 
----
+Excluir tarefas
 
-## Funcionalidades
+Listar todas as tarefas cadastradas
 
-- ✅ Adicionar tarefas  
-- ✅ Editar tarefas existentes  
-- ✅ Excluir tarefas  
-- ✅ Listar tarefas com ID, título, descrição e data de criação  
+Armazenar os dados no banco de dados MySQL
 
----
+Tecnologias utilizadas
 
-## Como rodar o projeto
+PHP
 
-1. Instale o [XAMPP](https://www.apachefriends.org/pt_br/index.html)  
-2. Copie a pasta do projeto para:  
-C:\xampp\htdocs\crud_tarefas
+MySQL
 
-3. Inicie o **Apache** e o **MySQL** no XAMPP  
-4. Crie o banco de dados no MySQL (`tarefas_db`) com a tabela `tarefas`  
-5. Abra no navegador:  
+HTML5
+
+CSS3
+
+XAMPP (Apache e MySQL)
+
+Como executar o projeto
+
+Instale o XAMPP no seu computador.
+
+Copie a pasta do projeto para o diretório:
+
+C:\xampp\htdocs\
 
 
-http://localhost/crud_tarefas/index.php
+No navegador, acesse o phpMyAdmin:
+
+http://localhost/phpmyadmin
+
+
+Crie um banco de dados com o nome:
+
+crud_tarefas
+
+
+No banco criado, execute o seguinte comando SQL:
+
+CREATE TABLE tarefas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    data DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+Verifique se o arquivo db.php está configurado com as credenciais corretas:
+
+$conn = new mysqli("localhost", "root", "", "crud_tarefas");
+
+
+Inicie o Apache e o MySQL no XAMPP.
+
+Acesse o projeto pelo navegador:
+
+http://localhost/crud_tarefas/
+
+Estrutura do projeto
 crud_tarefas/
+│
+├── add.php          # Página para adicionar novas tarefas
+├── edit.php         # Página para editar tarefas
+├── delete.php       # Página para excluir tarefas
+├── db.php           # Conexão com o banco de dados
+├── index.php        # Página principal com a lista de tarefas
+├── style.css        # Arquivo de estilo da aplicação
+└── readme.md        # Documentação do projeto
 
-## Estrutura de arquivos
-├─ index.php # Lista de tarefas
-├─ add.php # Adicionar tarefa
-├─ edit.php # Editar tarefa
-├─ delete.php # Excluir tarefa
-├─ db.php # Conexão com o banco de dados
-├─ style.css # Estilo da página
-└─ README.md # Este arquivo
+Possíveis melhorias
+
+Implementar busca por tarefas
+
+Adicionar opção de marcar tarefa como concluída
+
+Criar layout responsivo para dispositivos móveis
+
+Adicionar modo escuro
+
+Autora
+
+Allana Ismério
+Estudante de Análise e Desenvolvimento de Sistemas
+Este projeto foi desenvolvido com o objetivo de colocar em prática os conhecimentos adquiridos em PHP, MySQL e front-end.
