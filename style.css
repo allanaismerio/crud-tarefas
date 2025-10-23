@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Container central */
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* Botão adicionar tarefa */
+.btn {
+    display: inline-block;
+    background: #00b894;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background: #01976f;
+    transform: translateY(-2px);
+}
+
+/* Tabela estilizada */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho da tabela */
+th {
+    background: #00cec9;
+    color: #fff;
+    text-align: left;
+    padding: 15px;
+}
+
+/* Linhas da tabela */
+td {
+    background: #f7f7f7;
+    padding: 12px 15px;
+    color: #333;
+}
+
+/* Alternância de cor das linhas */
+tr:nth-child(even) td {
+    background: #e0f7f7;
+}
+
+/* Links de ação */
+td a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+td a:hover {
+    transform: translateY(-2px);
+}
+
+/* Editar e Excluir */
+td a:first-child {
+    background: #0984e3;
+    margin-right: 5px;
+}
+
+td a:first-child:hover {
+    background: #0652dd;
+}
+
+td a:last-child {
+    background: #d63031;
+}
+
+td a:last-child:hover {
+    background: #b71c1c;
+}
+
+/* Formulário de adicionar/editar tarefa */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input[type="text"], form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus, form textarea:focus {
+    border-color: #00b894;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,184,148,0.5);
+}
+
+form input[type="submit"] {
+    background: #00b894;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #01976f;
+    transform: translateY(-2px);
+}
+
+/* Link voltar */
+a.back {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0984e3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.back:hover {
+    color: #0652dd;
+}
