@@ -1,9 +1,9 @@
 CRUD de Tarefas
 
-Este projeto é uma aplicação simples de gerenciamento de tarefas, desenvolvida em PHP com MySQL.
-O objetivo é permitir o cadastro, edição, exclusão e listagem de tarefas de forma prática e intuitiva.
+Aplicação simples de gerenciamento de tarefas desenvolvida em PHP com MySQL.
+Permite criar, editar, excluir e listar tarefas de forma prática e intuitiva.
 
-Funcionalidades
+🧩 Funcionalidades
 
 Adicionar novas tarefas
 
@@ -13,9 +13,9 @@ Excluir tarefas
 
 Listar todas as tarefas cadastradas
 
-Armazenar os dados no banco de dados MySQL
+Armazenamento de dados no banco MySQL
 
-Tecnologias utilizadas
+🛠️ Tecnologias Utilizadas
 
 PHP
 
@@ -27,16 +27,20 @@ CSS3
 
 XAMPP (Apache e MySQL)
 
-Como executar o projeto
+🚀 Como Executar o Projeto
+1. Instalar o XAMPP
 
-Instale o XAMPP no seu computador.
+Baixe e instale o XAMPP no seu computador.
 
-Copie a pasta do projeto para o diretório:
+2. Mover o Projeto
+
+Coloque a pasta do projeto dentro do diretório:
 
 C:\xampp\htdocs\
 
+3. Criar o Banco de Dados
 
-No navegador, acesse o phpMyAdmin:
+Acesse o phpMyAdmin:
 
 http://localhost/phpmyadmin
 
@@ -45,8 +49,9 @@ Crie um banco de dados com o nome:
 
 crud_tarefas
 
+4. Criar a Tabela
 
-No banco criado, execute o seguinte comando SQL:
+Execute o seguinte comando SQL:
 
 CREATE TABLE tarefas (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -55,41 +60,42 @@ CREATE TABLE tarefas (
     data DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+5. Configurar a Conexão
 
-Verifique se o arquivo db.php está configurado com as credenciais corretas:
+Abra o arquivo db.php e verifique se as credenciais estão corretas:
 
 $conn = new mysqli("localhost", "root", "", "crud_tarefas");
 
+6. Executar o Projeto
 
-Inicie o Apache e o MySQL no XAMPP.
-
-Acesse o projeto pelo navegador:
+Inicie o Apache e o MySQL no painel do XAMPP.
+Em seguida, acesse no navegador:
 
 http://localhost/crud_tarefas/
 
-Estrutura do projeto
+📂 Estrutura do Projeto
 crud_tarefas/
 │
-├── add.php          # Página para adicionar novas tarefas
-├── edit.php         # Página para editar tarefas
-├── delete.php       # Página para excluir tarefas
+├── add.php          # Adiciona novas tarefas
+├── edit.php         # Edita tarefas existentes
+├── delete.php       # Exclui tarefas
 ├── db.php           # Conexão com o banco de dados
-├── index.php        # Página principal com a lista de tarefas
-├── style.css        # Arquivo de estilo da aplicação
+├── index.php        # Página principal (lista de tarefas)
+├── style.css        # Estilos do site
 └── readme.md        # Documentação do projeto
 
-Possíveis melhorias
+💡 Melhorias Futuras
 
 Implementar busca por tarefas
 
-Adicionar opção de marcar tarefa como concluída
+Adicionar opção de marcar como concluída
 
 Criar layout responsivo para dispositivos móveis
 
 Adicionar modo escuro
 
-Autora
+👩‍💻 Autora
 
 Allana Ismério
 Estudante de Análise e Desenvolvimento de Sistemas
-Este projeto foi desenvolvido com o objetivo de colocar em prática os conhecimentos adquiridos em PHP, MySQL e front-end.
+Projeto desenvolvido para prática em PHP, MySQL e Front-End.
